@@ -1,76 +1,84 @@
+{
 \begin{titlepage}
-
-
-%set page layout
+  
+%set page layout for titlepage
 \newgeometry{
   top=2.5cm,
-  bottom=2cm,
+  bottom=2.8cm,
   outer=1.6cm,
   inner=2cm,
 }
 
-%define graphical properties
+%define bar color
 \definecolor{HAWBannerColor}{RGB}{14, 144, 90}
 
+%--------------------------------------------------------%
+%--------------------------------------------------------%
+%--------------------------------------------------------%
 
+%HAW color bar
+%--------------------------------------------------------%
 \setlength{\parindent}{-2.5cm} % remove indent for color bar
 
 %% HAW logo
-  \begin{textblock*}{\textwidth}(10cm,-2cm)
-    \begin{minipage}[r]{\textwidth}
-      \includegraphics[width=10cm]{figures/HAW_logo.eps}%
-    \end{minipage}
-  \end{textblock*}
+\begin{textblock*}{\textwidth}(10.3cm,-2cm)
+  \begin{minipage}[r]{\textwidth}
+    \includegraphics[width=10cm]{figures/HAW_logo.eps}%
+   \end{minipage}
+\end{textblock*}
 
 %% color bar
-  \begin{textblock*}{\paperwidth}(0.1cm,6cm)
-    \colorbox{HAWBannerColor}{
-      %% use a minipage that is the size of the colored banner
-      %% center the minipage
-      \begin{minipage}[l][10cm][c]{\paperwidth}%
-        %% put the box on the right side
-        \hspace*{0.25\textwidth}
-        \parbox[t]{0.6\textwidth}{
-          {\begin{flushright}
-            
-          {\bfseries\huge Student Research Rroject}
+\begin{textblock*}{\paperwidth}(0.1cm,6cm)
+  \colorbox{HAWBannerColor}{
+     %% use a minipage that is the size of the colored banner
+     %% center the minipage
+    \begin{minipage}[l][9,6cm][c]{\paperwidth}%
+       %% put the box on the right side
+       \hspace*{0.25\textwidth}
+       \parbox[t]{0.635\textwidth}{
+        {\begin{flushright}
+       
+          \vspace{1cm}
+        {\bfseries\huge Bachelor-/Masterarbeit}
 
-          \vspace{2cm}
-          \Large Moritz Burmester
+        \vspace{2cm}
+         \Large Max Mustermann
 
-          \vspace{0.5cm}
-          {\bfseries\LARGE Realisierung einer\\ automatisierten CFD Simulation\\ für Flugzeugkonfigurationen}
+        \vspace{0.5cm}
+         {\bfseries\LARGE Konstruktion und Berechnung eines dünnwandigen Mehrzweckkörpers zur Personenbeförderung}
         \end{flushright}
         }}%
-      \end{minipage}
+   \end{minipage}
     }
   \end{textblock*}
 
 \vfill
 
+%Faculty and departement
+%--------------------------------------------------------%
 {
-  \setlength{\parindent}{0cm}
+\setlength{\parindent}{0cm} % bring back indent
+
 %set font to Calibri
 \calibriFont
 
-  %% department name
-  %\setlength{\parindent}{0cm}
-    \begin{minipage}{0.49\linewidth}
-        \begin{flushleft}
-        \textit{Fakultät Technik und Informatik\\
-        Department Fahrzeugtechnik und Flugzeugbau}
-    \end{flushleft}
-    \end{minipage}
+\begin{minipage}{0.49\linewidth}
+    \begin{flushleft}
+    {\normalsize \textit{Fakultät Technik und Informatik\\
+     Department Fahrzeugtechnik und Flugzeugbau}
+    }
+  \end{flushleft}
+ \end{minipage}
     \hfill
-    \begin{minipage}{0.49\linewidth}
-        \begin{flushright}
-            \textit{Faculty of Engineering and Computer Science
-            Department of Automotive and\\
-            Aeronautical Engineering}
-        \end{flushright}
-    \end{minipage}
+\begin{minipage}{0.49\linewidth}
+   \begin{flushright}
+      {\normalsize \textit{Faculty of Engineering and Computer Science
+        Department of Automotive and\\
+        Aeronautical Engineering}
+      }
+  \end{flushright}
+\end{minipage}
 }
 
-
-
 \end{titlepage}
+}

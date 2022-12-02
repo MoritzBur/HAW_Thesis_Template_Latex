@@ -1,50 +1,62 @@
-\documentclass[11pt,twoside,a4paper]{report}
-
-\usepackage{fontspec}
-\setmainfont{Arial}
-\newfontfamily\calibriFont[Ligatures=TeX]{Calibri}
-
-
+\documentclass[11pt,a4paper]{report}
 %include packages
+\usepackage{fontspec}
 \usepackage{textpos}
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{geometry}
+\usepackage{afterpage}
+\usepackage{lipsum}
+
+%set global fonts
+\setmainfont{Arial}
+\newfontfamily\calibriFont[Ligatures=TeX]{Calibri}
+
+%enable example text
 
 
+%--------------------------------------------------------%
+%--------------------------------------------------------%
+%--------------------------------------------------------%
 
 \begin{document}
+
+%front matter
 \pagenumbering{roman}
 \include{titlepage.tex}
 \include{submission.tex}
+\addcontentsline{toc}{chapter}{Abstract}
+\include{abstract.tex}
+\tableofcontents
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
 
+\clearpage %clear page count
 
-%set page layout
+%main matter
+\pagenumbering{arabic}
+
+%set page layout for main matter
 \newgeometry{
   top=2.5cm,
   bottom=2cm,
-  outer=2.5cm,
-  inner=2.5cm,
+  outer=3cm,
+  inner=3cm,
 }
-
-\include{abstract.tex}
-
-
-\tableofcontents
-\listoffigures
-\clearpage
-\pagenumbering{arabic}
 
 \include{ch-Introduction.tex}
 \include{ch-State of the Art.tex}
 \include{ch-Developed Concept and Implementation.tex}
 \include{ch-Closure.tex}
 
+%appendix
 \appendix
 \include{Appendix.tex}
 
+%bibliography
 %\bibliographystyle{plain}
 %\bibliography{ref.bib}
-
 
 \end{document}

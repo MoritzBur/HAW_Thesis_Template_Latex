@@ -1,21 +1,32 @@
-%set page layout
+{
+\thispagestyle{empty}
+
+%set page layout for submission page
+\afterpage{%
 \newgeometry{
-  top=4cm,
-  bottom=2cm,
-  outer=4cm,
+  top=5.3cm,
+  bottom=3.3cm,
+  outer=3.5cm,
   inner=2.5cm,
 }
 
+%--------------------------------------------------------%
+%--------------------------------------------------------%
+%--------------------------------------------------------%
+
+%submission information
+%--------------------------------------------------------%
+
 {\centering
-\LARGE\textbf{Moritz Burmester\\
-\bigskip
-Realisierung einer
-automatisierten CFD Simulation
-für Flugzeugkonfigurationen}
+  \LARGE\textbf{Max Mustermann\\}
+  \bigskip
+  \textbf{Thema der Bachelor-/Masterarbeit}\par
 }
 
 \vfill
+
 \normalsize
+
 \begin{flushleft}
 
 Bachelor-/Masterarbeit eingereicht im Rahmen der Bachelor-/Masterprüfung \newline
@@ -34,7 +45,11 @@ PLZ Ort \newline
 Erstprüfer/in: Titel und Name  \\
 Zweitprüfer/in : Titel und Name \newline
 
-
 Abgabedatum: Datum\\
     
 \end{flushleft}
+
+\clearpage
+\restoregeometry
+}
+}
