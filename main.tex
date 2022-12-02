@@ -1,0 +1,50 @@
+\documentclass[11pt,twoside,a4paper]{report}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+\newfontfamily\calibriFont[Ligatures=TeX]{Calibri}
+
+
+%include packages
+\usepackage{textpos}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{geometry}
+
+
+
+\begin{document}
+\pagenumbering{roman}
+\include{titlepage.tex}
+\include{submission.tex}
+
+
+%set page layout
+\newgeometry{
+  top=2.5cm,
+  bottom=2cm,
+  outer=2.5cm,
+  inner=2.5cm,
+}
+
+\include{abstract.tex}
+
+
+\tableofcontents
+\listoffigures
+\clearpage
+\pagenumbering{arabic}
+
+\include{ch-Introduction.tex}
+\include{ch-State of the Art.tex}
+\include{ch-Developed Concept and Implementation.tex}
+\include{ch-Closure.tex}
+
+\appendix
+\include{Appendix.tex}
+
+%\bibliographystyle{plain}
+%\bibliography{ref.bib}
+
+
+\end{document}
