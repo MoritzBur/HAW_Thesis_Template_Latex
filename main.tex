@@ -11,6 +11,9 @@
 \usepackage{amsmath}
 \usepackage{acronym}
 \usepackage[ngerman]{babel} % Deutsche Lokalisierung
+\usepackage{csquotes}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{references.bib}
 
 
 %set global fonts
@@ -53,7 +56,7 @@
 }
 
 \include{ch-Einleitung}
-\include{ch-Theoretische Grundlagen}
+\include{ch-Theoretische_Grundlagen}
 \include{ch-Rotorblattdesign}
 \include{ch-Closure.tex}
 
@@ -62,7 +65,7 @@
 \include{Appendix.tex}
 
 %bibliography
-\bibliographystyle{plain}
-\bibliography{references.bib}
+%\bibliographystyle{plain}
+%\bibliography{references.bib}
 
 \end{document}
