@@ -9,6 +9,8 @@
 \usepackage{lipsum}
 \usepackage{microtype}
 \usepackage{amsmath}
+\usepackage{acronym}
+\usepackage[ngerman]{babel} % Deutsche Lokalisierung
 
 
 %set global fonts
@@ -31,10 +33,11 @@
 \addcontentsline{toc}{chapter}{Abstract}
 \include{abstract.tex}
 \tableofcontents
-\addcontentsline{toc}{chapter}{List of Figures}
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
 \listoffigures
-\addcontentsline{toc}{chapter}{List of Tables}
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
 \listoftables
+\include{sec-Abkürzungsverzeichnis}
 
 \clearpage %clear page count
 
@@ -59,7 +62,7 @@
 \include{Appendix.tex}
 
 %bibliography
-%\bibliographystyle{plain}
-%\bibliography{ref.bib}
+\bibliographystyle{plain}
+\bibliography{references.bib}
 
 \end{document}
