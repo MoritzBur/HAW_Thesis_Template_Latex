@@ -1,19 +1,19 @@
 \chapter{Theoretische Grundlagen}
 
 \section{Aerodynamische Wirkweise des Rotors}
-Die aerodynamische Wirkweise des Rotors einer Horizontalachsenwindkraftanlage (HAWA) ist grundlegend für das Verständnis ihrer Funktionsweise.
-Im Kern basiert die Energiegewinnung durch HAWAs auf dem Prinzip der Umwandlung von kinetischer Energie des Windes in mechanische Energie durch die Rotoren.
-Diese Rotoren, im Wesentlichen große Flügel oder Blätter, sind so konstruiert, dass sie den Windstrom nutzen und dabei eine Drehbewegung erzeugen.
+In der Welt der Windenergieerzeugung gibt es zwei grundlegende Bauformen von Windkraftanlagen: die Horizontalachsenwindkraftanlagen (HAWTs) und die Vertikalachsenwindkraftanlagen (VAWTs). Während Vertikalachsenanlagen bestimmte Vorteile in Bezug auf die Windrichtungsunabhängigkeit und die einfache Wartung aufweisen, haben sich Horizontalachsenwindkraftanlagen als die effizientere und weit verbreitete Option erwiesen. Diese Effizienz rührt von ihrer Fähigkeit her, höhere Energiemengen aus dem Wind zu extrahieren, insbesondere bei starken und konstanten Windverhältnissen, wie sie häufig in Offshore-Umgebungen vorkommen. Aufgrund dieser Überlegenheit in Bezug auf die Energieausbeute und die technologische Reife konzentriert sich diese Arbeit ausschließlich auf die Betrachtung und Analyse von Horizontalachsenwindkraftanlagen.
 
-Das zugrundeliegende physikalische Prinzip ist das gleiche wie bei Flugzeugflügeln: der Auftrieb.
+\begin{figure}[htbp] % Positionierungsoptionen: h=here, t=top, b=bottom, p=page of floats
+    \centering % Zentriert das Bild
+    \includegraphics[width=0.8\textwidth]{figures/kraft_an_blatt.png} % Pfad zum Bild und Skalierung
+    \caption{Kräfte am Rotorblatt resultieren in Drehmoment \cite{hau_physikalische_2016}} % Bildunterschrift
+    \label{fig:kraft_an_blatt} % Label für Referenzen im Text
+\end{figure}
+
+Das zugrundeliegende physikalische Prinzip von HAWTs ist das gleiche wie bei Flugzeugflügeln: der Auftrieb.
 Der Rotorblattquerschnitt ist so geformt, dass eine Differenz im Luftdruck zwischen der oberen und der unteren Seite des Rotorblattes entsteht, wenn Wind darüber strömt.
-Die Unterseite des Rotorblattes erfährt einen höheren Druck als die Oberseite, was zu einer Auftriebskraft führt, die das Rotorblatt nach oben zieht.
-Dieser Auftrieb wird in eine Drehbewegung umgesetzt, die dann genutzt wird, um über einen Generator elektrische Energie zu erzeugen.
-
-Ein entscheidender Aspekt bei der Auslegung von Rotoren ist die Effizienz, mit der sie die Windenergie einfangen und umwandeln.
-Die Effizienz eines Windrotors wird oft durch den Leistungsbeiwert quantifiziert, der ein Maß dafür ist, welcher Anteil der im Wind enthaltenen Energie durch den Rotor extrahiert wird.
-Der theoretische Höchstwert dieses Leistungsbeiwertes, bekannt als Betzscher Grenzwert, besagt, dass maximal 59,3\% der Energie des Windes durch einen perfekt designten Rotor genutzt werden können.
-Diese Grenze ist fundamental für das Design und die Optimierung von Windkraftanlagen.
+Die Unterseite des Rotorblattes erfährt einen höheren Druck als die Oberseite, was zu einer Auftriebskraft führt, die das Rotorblatt nach oben bzw. in Drehrichtung des Rotors zieht.
+Dieser Auftrieb erzeugt um die Nabe des Rotors ein Drehmoment. Der Rotor dreht sich und treibt den Generator an.
 
 \section{Kennzahlen}
 Der Leistungsbeiwert \( C_P \) ist eine zentrale Kenngröße in der Aerodynamik von Horizontalachsenwindkraftanlagen (HAWAs) und quantifiziert das Verhältnis der nutzbaren mechanischen Leistung \( P \) einer Windturbine zur gesamten kinetischen Leistung des Windes \( P_{\text{wind}} \) im Rotorquerschnitt. Mathematisch ausgedrückt, ist \( C_P \) definiert als:
