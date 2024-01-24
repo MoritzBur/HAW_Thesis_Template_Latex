@@ -33,7 +33,7 @@ Der Schubbeiwert \( C_T \) ist eine weitere wichtige aerodynamische Kenngröße 
 C_T = \frac{F_T}{\frac{1}{2} \rho A v^2}
 \end{equation}
 
-wobei \( F_T \) die Schubkraft ist. Ein hoher Schubbeiwert kann auf eine effektive Energieübertragung hinweisen, führt jedoch auch zu erhöhten mechanischen Belastungen der Turbinenstruktur. Die Auslegung zielt daher auf ein optimales Gleichgewicht zwischen Energieextraktion und struktureller Belastung ab. Im Kontext der Multirotor-Winkraftanlagen kommt dem Schubbeiwert eine weitere Bedeutung zu. Kontrollierte Schubkraftunterschiede zwischen den einzelnen Rotoren könnten für die Ausrichtung der gesamten Anlage entsprechend der Windrichtung genutzt werden. 
+wobei \( F_T \) die Schubkraft ist. Dies ist die Kraftkomponente auf die Rotorblätter, die senkrecht zur Rotorebene steht. Ein hoher Schubbeiwert kann auf eine effektive Energieübertragung hinweisen, führt jedoch auch zu erhöhten mechanischen Belastungen der Turbinenstruktur. Die Auslegung zielt daher auf ein optimales Gleichgewicht zwischen Energieextraktion und struktureller Belastung ab. Im Kontext der Multirotor-Winkraftanlagen kommt dem Schubbeiwert eine weitere Bedeutung zu. Kontrollierte Schubkraftunterschiede zwischen den einzelnen Rotoren könnten für die Ausrichtung der gesamten Anlage entsprechend der Windrichtung genutzt werden. 
 
 \subsection{Schnellaufzahl}
 Die Schnellaufzahl \( \lambda \) oder auch \( TSR \) für Tip Speed Ratio ist ein maßgeblicher Parameter in der Aerodynamik von Windenergieanlagen. Sie berechnet sich aus dem Verhältnis der Umfangsgeschwindigkeit der Rotorblattspitze \( u \) zur Windgeschwindigkeit \( v \) an der Turbine:
@@ -74,6 +74,8 @@ Aerodynamische Profile unterliegen Konventionen zur Beschreibung ihrer Formgebun
 \end{itemize}
 
 \subsection{Kräfte und Kennzahlen eines Profils}
+\label{sec:forces_profile}
+
 
 In der Aerodynamik, insbesondere bei der Betrachtung von Windkraftrotorblättern, sind die Auftriebs- und Widerstandskräfte zentral. Diese Kräfte werden jedoch nicht direkt verwendet, sondern durch dimensionslose Beiwerte dargestellt. Der Grund dafür liegt in der universellen Anwendbarkeit und Vergleichbarkeit dieser Beiwerte.
 
@@ -97,13 +99,24 @@ Die Gleitzahl, die die aerodynamische Effizienz des Profils angibt, wird als das
 E = \frac{c_l}{c_d}
 \end{equation}
 
-Dieser Wert gilt nicht für alle Anstellwinkel des Profils. Die Gleitzahl bezieht sich i.d.R auf den Anströmwinkel, bei dem der höchste Wert erreicht wird.
+Dieser Wert gilt nicht für alle Anstellwinkel des Profils. Die Gleitzahl bezieht sich i.d.R auf den Anströmwinkel, bei dem der höchste Wert erreicht wird. Desweiteren sind die Eigenschaften eines Profils im Allgemeinen von der Reynoldszahl sowie der Machzahl abhängig.
 Eine hohe Gleitzahl bedeutet, dass das Profil effizient Auftrieb erzeugt, während der Widerstand gering bleibt. 
 Bei Windkraftrotoren ist eine hohe Gleitzahl wichtig, da sie direkt die Menge an nutzbarer Energie beeinflusst, die aus dem Wind extrahiert werden kann. Die Optimierung des Profils zielt daher im Allgemeinen darauf ab, eine möglichst hohe Gleitzahl zu erreichen, um die Effizienz und Leistung der Windturbine zu maximieren.
 
-\section{Grundbegriffe und Geometrie des Rotorblattes}
+\newpage % damit die Aufteilung besser ist
 
-Schub, Tangentialkraft
+\section{Geometrie des Rotorblattes}
+Neben der Spannweite eines Rotorblattes selbst sind vor allem drei Eigenschaften für die Gestalt ausschlaggebend:
+
+\paragraph{Profiltiefe}
+Sowohl aerodynamische, wie auch strukturelle und wirtschaftliche Aspekte bestimmen darüber, wie die Planform eines Blattes gestaltet ist. Je weniger 
+
+\paragraph{Verwindung}
+Aufgrund der Drehbewegung des Rotors verändert sich die relative Windgeschwindigkeit des Blattes kontinuierlich entlang der Spannweite. (Siehe \cref{fig:verwindung}) Daher werden Rotorblätter so gebaut, dass ihr Blatteinstellwinkel \(\vartheta\) entlang jedes Profilschnittes zu einem optimalen aerodynamischen Anstellwinkel \(\alpha\) führt. Der Blatteinstellwinkel beschreibt dabei den Winkel zwischen Profilsehne und Rotorebene.Der aerodynamische Anstellwinkel beschreibt den Winkel zwischen lokaler Anströmung und der Profilsehne. 
+Wird der Rotor außerhalb seines designgebenden Betriebspunktes betrieben, lässt sich bei modernen Anlagen meist das gesamte Rotorblatt drehen. Der damit erzeugte Pitchwinkel addiert sich zum Einstellwinkel. Diese Möglichkeit wird genutzt, um die Struktur bei zu hohen Windgeschwindigkeiten zu entlasten. \cite{hau_rotorblatter_2016}
+
+\paragraph{Profile}
+Je nachdem, unter welchen Bedingungen die Blattsektion angeströmt wird, können unterschiedliche Effekte einen Einfluss haben. Bei kleineren Anlagen und weit entfernt von den Blattspitzen werden Profile verwendet, die möglichst große Anteile laminarer Grenzschichten aufweisen. Dabei spielt auch die Toleranz gegenüber Verschmutzungen eine Rolle. \cite{hau_bauformen_2016} An den Blattspitzen großer Anlagen nähert man sich dem Bereich der transsonischen Strömungen. Die auftretenden kompressiblen Effekte führen zu anderen Profilformen. \cite{anderson_fundamentals_2017} In allen Fällen muss die Profildicke ausreichen, um den Biegespannungen standhalten zu können und günstig herstellbar zu sein. Im Bereich sehr kleiner Rotoren treten dagegen besondere Strömungseffekte auf, für die nur wenige Profile entwickelt wurden.\cite{buchholz_erarbeitung_2020} Eine nähere Betrachtung der Effekte befindet sich in \cref{sec:low_re}.
 
 \begin{figure}[htbp] % Positionierungsoptionen: h=here, t=top, b=bottom, p=page of floats
     \centering % Zentriert das Bild
@@ -118,6 +131,8 @@ Schub, Tangentialkraft
     \caption{Konventionelle Winkelunterscheidung \cite{hau_physikalische_2016}} % Bildunterschrift
     \label{fig:kraft_an_blatt} % Label für Referenzen im Text
 \end{figure}
+
+\newpage % damit die Bilder keine Lücke in den nachfolgenden Abschnitt reißen
 
 \section{Methoden der Rotorblattauslegung}
 \subsection{Auslegung nach Betz und Schmitz}
@@ -147,8 +162,8 @@ Die dabei verwendeten Theorien bauen auf einander auf und werden häufig zusamme
 
 \subsubsection{Blatt Element Methode}
 Die Blatt Element Methode teilt die Rotorblätter in mehrere kleine Elemente entlang der Spannweite auf und ermöglicht so die Berechnung von Kräften und Momenten auf jedem Abschnitt.
-Die Methode basiert auf der Annahme, dass jedes Blattelement die Strömung zwei-dimensional und unabhängig von den anderen Elementen erlebt. Die lokalen Strömungsbedingungen werden durch die Geometrie und die Betriebsbedingungen des Rotors bestimmt. \cite{branlard_wind_2017}
-Dies ermöglicht die Verwendung von zweidimensionalen Auftriebs-, Widerstands- und Momentenkoeffizienten zusammen mit der relativen Strömungsgeschwindigkeit, um die Kräfte auf das betreffende Blattelement zu bestimmen.
+Die Methode basiert auf der Annahme, dass jedes Blattelement die Strömung zwei-dimensional und unabhängig von den anderen Elementen erlebt. Die lokalen Strömungsbedingungen werden durch die Geometrie und die Betriebsbedingungen des Rotors bestimmt. \cite{branlard_wind_2017} Die Aufteilung des Blattes in einzelne Streifen wird in \cref{fig:ringschnitt} verdeutlicht, während die Bestimmung der unterschiedlichen Windverhältnisse entlang des Blattes in \cref{fig:verwindung} veranschaulicht ist.
+Die Aufteilung in einzelne Elemente ermöglicht die Verwendung von zweidimensionalen Auftriebs-, Widerstands- und Momentenkoeffizienten zusammen mit der relativen Strömungsgeschwindigkeit, um die Kräfte auf das betreffende Blattelement zu bestimmen.
 Die Kräfte werden dann entlang der Spannweite des Blattes integriert, um den Gesamtschub und das Drehmoment zu bestimmen, das durch den Rotor erzeugt wird.
 
 \subsubsection{Blatt Element Momentum}
@@ -162,4 +177,10 @@ Um die Genauigkeit der Vorhersagen weiter zu steigern, werden in einigen Formuli
 \label{fig:ringschnitt}
 \end{figure}
 
-\section{Besonderheiten sehr kleiner Windkraftanlagen}
+\section{Besonderheiten sehr kleiner Rotoren}
+\label{sec:low_re}
+\paragraph{Geringe Reynoldszahl}
+Wie in \ref{sec:forces_profile} erwähnt, hängen die Leistungswerte eines aerodynamischen Profils von der Reynoldszahl ab. (Die Machzahl kann bei \( M<0,3\) vernachlässigt werden. \cite{anderson_fundamentals_2017}) Der Rotor, um den es in dieser Arbeit geht, ist selbst mit Klein-Windkraftanlagen sehr klein. Daher befinden sich die erwarteten Reynoldszahlen im Bereich von \(Re\leq 5 \times 10^4\). In diesem Bereich spielen die viskosen Kräfte also eine deutlich größere Rolle als bei Handelsüblichen WKA zur Energieerzeugung, wo  \(Re = O(10^6)\). \cite{hau_physikalische_2016}, \cite{anderson_fundamentals_2017} Zur Orientierung: Der Laminar-Turbulente Umschlag bei einer angeströmten glatten Fläche liegt bei einer lokalen Reynoldszahl von \(Re\approx 5 \times 10^5\). 
+Die Auftretenden Effekte sind also von laminaren Grenzschichten geprägt. Herkömmliche, dicke Profile erreichen bei diesen Bedingungen keine hohen Gleitzahlen. Sie lei
+
+\paragraph{Fertigung kleiner Strukturen}
